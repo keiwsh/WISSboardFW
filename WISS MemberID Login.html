@@ -220,8 +220,21 @@
         form.onsubmit = function (e) {
           e.preventDefault(); // Prevent the default form submission
           var passwordInput = document.getElementById("pass").value;
-          var validPasswords = ["548653", "893432", "543489", "843216", "931135", "138131", "248631", "646413", "648613", "987615", "admin"]; // Array of valid passwords
-          window.location.href = "https://wissboard1.vercel.app/"; // Redirect to Board.html if password matches
+          var validPasswords = [
+            "548653",
+            "893432",
+            "543489",
+            "843216",
+            "931135",
+            "138131",
+            "248631",
+            "646413",
+            "648613",
+            "987615",
+            "admin",
+          ]; // Array of valid passwords
+          if (validPasswords.includes(passwordInput)) {
+            window.location.href = "https://wissboard1.vercel.app/"; // Redirect to Board.html if password matches
           } else {
             // Display error message if password does not match
             document.querySelector(
